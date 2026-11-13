@@ -225,13 +225,13 @@ bool spellCheck(string dictionaryWords[], string wordToMatch, string typeOfSearc
                 return true;
             }
         }
+    }
         if(DEBUG)
         {
             auto end = high_resolution_clock::now();
             duration<double, micro> elapsed = end - start;
             cout << "DEBUG: Linear Search Unsorted took " << elapsed.count() << " microseconds." << endl << endl;
         }
-    }
     
 
     start = high_resolution_clock::now();
@@ -248,13 +248,13 @@ bool spellCheck(string dictionaryWords[], string wordToMatch, string typeOfSearc
                 break;
             }
         }
+    }
         if(DEBUG)
         {
             auto end = high_resolution_clock::now();
             duration<double, micro> elapsed = end - start;
             cout << "DEBUG: Linear Search sorted took " << elapsed.count() << " microseconds." << endl << endl;
         }
-    }
 
     start = high_resolution_clock::now();
 
@@ -280,13 +280,13 @@ bool spellCheck(string dictionaryWords[], string wordToMatch, string typeOfSearc
                 right = mid - 1;
             }
         }
-        if(DEBUG)
+    }
+    if(DEBUG)
         {
             auto end = high_resolution_clock::now();
             duration<double, micro> elapsed = end - start;
             cout << "DEBUG: Binary search took " << elapsed.count() << " microseconds." << endl << endl;
         }
-    }
     
 
     return false;
